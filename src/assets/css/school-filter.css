@@ -1,0 +1,174 @@
+/* Default SchoolFilter Styles */
+.school-filter {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid transparent;
+  margin-bottom: 16px;
+}
+
+.school-filter-tab {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: normal;
+  color: #222;
+  border-bottom: 3px solid transparent;
+  padding: 8px 0;
+  font-size: 24px;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+.school-filter-tab.active {
+  font-weight: bold;
+  color: #0955A0;
+  border-bottom: 3px solid #FAD80E;
+}
+
+/* Style Variations */
+
+/* Segmented Style - Based on the image */
+.school-filter.segmented {
+  display: flex;
+  gap: 0;
+  border: 2px dotted #87CEEB;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: white;
+  position: relative;
+}
+
+.school-filter.segmented .school-filter-tab {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+  border-bottom: none;
+  padding: 8px 12px;
+  position: relative;
+  background: none;
+}
+
+.school-filter.segmented .school-filter-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #FAD80E; /* Yellow by default */
+  transition: background-color 0.3s;
+}
+
+/* Simple odd/even behavior */
+.school-filter.segmented .school-filter-tab.odd::after {
+  background-color: #FAD80E; /* Yellow for odd tabs (1st, 3rd, 5th...) */
+}
+
+.school-filter.segmented .school-filter-tab.even::after {
+  background-color: #0955A0; /* Dark blue for even tabs (2nd, 4th, 6th...) */
+}
+
+/* Active state overrides */
+.school-filter.segmented .school-filter-tab.active.odd::after {
+  background-color: #0955A0; /* Dark blue for active odd tabs */
+}
+
+.school-filter.segmented .school-filter-tab.active.even::after {
+  background-color: #FAD80E; /* Yellow for active even tabs */
+}
+
+/* Compact Style */
+.school-filter.compact {
+  gap: 1rem;
+  margin-bottom: 12px;
+}
+
+.school-filter.compact .school-filter-tab {
+  font-size: 18px;
+  padding: 6px 0;
+}
+
+/* Large Style */
+.school-filter.large {
+  gap: 2rem;
+  margin-bottom: 24px;
+}
+
+.school-filter.large .school-filter-tab {
+  font-size: 28px;
+  padding: 12px 0;
+}
+
+/* Dark Theme */
+.school-filter.dark {
+  border-bottom: 1px solid #333;
+}
+
+.school-filter.dark .school-filter-tab {
+  color: #ccc;
+}
+
+.school-filter.dark .school-filter-tab.active {
+  color: #4A90E2;
+  border-bottom: 3px solid #4A90E2;
+}
+
+/* Minimal Style */
+.school-filter.minimal {
+  gap: 2rem;
+  border-bottom: none;
+}
+
+.school-filter.minimal .school-filter-tab {
+  font-size: 20px;
+  border-bottom: none;
+  position: relative;
+}
+
+.school-filter.minimal .school-filter-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0955A0;
+}
+
+/* Rounded Style */
+.school-filter.rounded .school-filter-tab {
+  border-radius: 20px;
+  padding: 8px 16px;
+  border-bottom: none;
+  background-color: #f5f5f5;
+  margin-right: 8px;
+}
+
+.school-filter.rounded .school-filter-tab.active {
+  background-color: #0955A0;
+  color: white;
+  border-bottom: none;
+}
+
+/* Underline Style */
+.school-filter.underline {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.school-filter.underline .school-filter-tab {
+  border-bottom: none;
+  position: relative;
+}
+
+.school-filter.underline .school-filter-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FAD80E;
+} 
