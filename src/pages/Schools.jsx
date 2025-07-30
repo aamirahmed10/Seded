@@ -6,6 +6,7 @@ import Cards from '../components/Cards'
 import CtaSection from '../components/CtaSection'
 import FaqSection from '../components/FaqSection'
 import { motion } from 'framer-motion'
+import SchoolMap from '../components/SchoolMap'
 
 const Schools = () => {
    
@@ -62,38 +63,7 @@ const Schools = () => {
                     
                     {/* Right Panel - Map Section */}
                     <div className='col-lg-6 pe-0 ps-2'>
-                        <div className='map-container'>
-                            <div className='map-filters mb-3'>
-                                <div className='d-flex flex-wrap gap-2'>
-                                    <button className='filter-btn active'>Tous</button>
-                                    <button className='filter-btn'>Primaire</button>
-                                    <button className='filter-btn'>Secondaire</button>
-                                    <button className='filter-btn'>SEN</button>
-                                    <button className='filter-btn'>Technique</button>
-                                </div>
-                                <div className='search-box'>
-                                    <input type="text" placeholder="Search this area" className='search-input' />
-                                    <i className="bi bi-search"></i>
-                                </div>
-                            </div>
-                            <div className='map-placeholder'>
-                                <div className='map-content'>
-                                    <h5>Interactive Map of Mauritius</h5>
-                                    <p>Map showing school locations across the island</p>
-                                    <div className='map-markers'>
-                                        <div className='marker' style={{top: '20%', left: '30%'}}>
-                                            <span>Le Bocage International School</span>
-                                        </div>
-                                        <div className='marker' style={{top: '40%', left: '60%'}}>
-                                            <span>Morning Star School</span>
-                                        </div>
-                                        <div className='marker' style={{top: '60%', left: '25%'}}>
-                                            <span>Doha Academy</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <SchoolMap  />
                     </div>
                 </div>
             </div>

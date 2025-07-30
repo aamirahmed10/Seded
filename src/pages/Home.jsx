@@ -49,7 +49,7 @@ const Home = () => {
                <PartnersSection {...partnersSection[0]} className={'partners-section'}/>
             </div>
               {/* Cta Section */}
-            <div className='container  section-bottom-spacing'>
+            <div className='container section-side-spacing'>
                 <CtaSection />
             </div>
             {/* news events section */}
