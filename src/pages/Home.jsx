@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <div>
             <BannerSlider height="80vh" className="banner-slider" content={bannerSliderContent} type='home' />
-            <div className="container pt-5 whatwedo-section section-top-spacing p-0">
+            <div className="container whatwedo-section section-top-spacing ">
             <motion.h3  className="text-center h1-primary pb-5" initial={{ opacity: 0, y: 40 }}  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }} >
                 Ce que nous faisons
             </motion.h3>
@@ -42,14 +42,14 @@ const Home = () => {
                </motion.div>
             </div>
              {/* Partners Section */}
-            <div className='container section-spacing p-0 '>
+            <div className='container section-spacing '>
                 <motion.h3  className="text-center h1-primary pb-3 m-0" initial={{ opacity: 0, y: 40 }}  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }} >
                   Nos Partenaires
                 </motion.h3>
-               <PartnersSection {...partnersSection[0]} />
+               <PartnersSection {...partnersSection[0]} className={'partners-section'}/>
             </div>
               {/* Cta Section */}
-            <div className='container p-0 section-bottom-spacing'>
+            <div className='container  section-bottom-spacing'>
                 <CtaSection />
             </div>
             {/* news events section */}
@@ -82,7 +82,7 @@ const Home = () => {
                     ))}
               </motion.div>
               <motion.div className='text-center pt-5' initial={{ opacity: 0, y: 40 }}  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }} viewport={{ once: true, amount: 0.2 }}  >
-                <Button variant="border" text="Voir tous les postes" link="/vacancies" />
+                <Button variant="border" text="Voir tous les postes" className={'btn-events'} link="/vacancies" />
             </motion.div>
             </div>
             

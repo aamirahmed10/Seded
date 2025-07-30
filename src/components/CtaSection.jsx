@@ -20,10 +20,10 @@ const itemVariants = {
 const CtaSection = ( {type = "default", title, btnText, link, className, image}) => {
     if(type === "default"){
       return (
-        <div className={`cta-section m-0 ${className}`}>
+        <div className={`cta-section container m-0 ${className}`}>
           <div className="row align-items-stretch rounded overflow-hidden position-relative">
             {/* Left side - Form */}
-            <div className="col-md-5 cta-left-overlay position-relative">
+            <div className="cta-left-overlay position-relative">
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
@@ -48,7 +48,7 @@ const CtaSection = ( {type = "default", title, btnText, link, className, image})
                 </motion.form>
               </motion.div>
             </div>
-            <div className="col-md-7 cta-image-bg" style={image ? { backgroundImage: `url(${image})` } : {}}>
+            <div className=" cta-image-bg" style={image ? { backgroundImage: `url(${image})` } : {}}>
             </div>
           </div>
         </div>

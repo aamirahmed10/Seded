@@ -69,7 +69,7 @@ const EventsSection = ({ events }) => {
         </div>
       </div>
       <div className='text-center pt-4'>
-        <Button variant="border" text="Voir tous les événements" link="/events" />
+        <Button variant="border" text="Voir tous les événements" className={'btn-events'} link="/events" />
       </div>
     </motion.div>
   );
